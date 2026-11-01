@@ -299,34 +299,54 @@ button, input, select, textarea {
 }
 
 .brand-logo {
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  line-height: 0;
+  max-height: 54px;
 }
 
 .brand-logo-img {
-  height: 52px;
+  height: 48px;
+  max-height: 48px;
   width: auto;
+  max-width: 170px;
   object-fit: contain;
-  transition: transform 0.3s ease;
+  display: block;
+  transition: transform 0.25s ease;
+}
+
+@media (min-width: 768px) {
+  .brand-logo-img {
+    height: 52px;
+    max-height: 52px;
+    max-width: 195px;
+  }
 }
 
 .brand-logo:hover .brand-logo-img {
-  transform: scale(1.03);
+  transform: scale(1.02);
 }
 
 .drawer-logo-img {
-  height: 48px;
+  height: 44px;
+  max-height: 44px;
   width: auto;
+  max-width: 160px;
   object-fit: contain;
+  display: block;
 }
 
 .footer-logo-img {
-  max-height: 70px;
+  height: 54px;
+  max-height: 54px;
   width: auto;
+  max-width: 200px;
   object-fit: contain;
-  background: #FFFFFF;
-  padding: 6px 12px;
+  display: block;
+  background: #FAF7F2;
+  padding: 6px 14px;
   border-radius: var(--radius-sm);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 .nav-menu {
